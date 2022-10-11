@@ -31,17 +31,17 @@
             <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-button button button-dark" href="#">Хочу сюда!</a>
+            <a class="button navigation-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-index">
-      <h1 class="visually-hidden">Сайт городка Седона</h1>
       <section class="welcome">
+        <h1 class="visually-hidden">Сайт городка Седона</h1>
         <img class="welcome-banner" src="" alt="Добро пожаловать в Седону!">
-        <h2 class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="welcome-description">Седона — небольшой городок в Аризоне, заслуживающий большего!<p>
        </section>
 
       <section class="advantages">
@@ -76,17 +76,14 @@
         <h2 class="visually-hidden">Рекомендации</h2>
         <ul class="recommendations-list">
           <li class="recommendations-item">
-            <img class="recommendations-logo" src="" alt="Дом">
             <h3 class="recommendations-title">Жильё</h3>
             <p class="recommendations-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="recommendations-item">
-            <img class="recommendations-logo" src="" alt="Бургер">
             <h3 class="recommendations-title">Еда</h3>
             <p class="recommendations-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="recommendations-item">
-            <img class="recommendations-logo" src="" alt="Подарок">
             <h3 class="recommendations-title">Сувениры</h3>
             <p class="recommendations-description">Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -96,15 +93,16 @@
       <section class="search-hotel">
         <h2 class="search-hotel-title">Заинтересовались?</h2>
         <p class="search-hotel-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-hotel-button button" href="#">Поиск гостиницы в Седоне</a>
+        <a class="button search-hotel-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
-      <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" type="email" placeholder="Ваш e-mail" name="subscribe-email" >
-          <button class="button button-blue" type="submit">Подписаться</button>
+      <section class="newsletter">
+        <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+        <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="newsletter-email">Email</label>
+          <input class="field" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email">
+          <button class="button button-blue newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
