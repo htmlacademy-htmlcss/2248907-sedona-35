@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* common styles */
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.main h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/* buttons */
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #756157;
+  text-align: center;
+  padding: 8px 50px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-basic:hover {
+  background-color: #615048;
+}
+
+.button-basic:focus {
+  background-color: #615048;
+}
+
+.button-basic:active {
+  background-color: #756157;
+}
+
+.button-second {
+  background-color: #82B3D3;
+}
+
+.button-second:hover {
+  background-color: #68A2CA;
+}
+
+.button-second:focus {
+  background-color: #68A2CA;
+}
+
+.button-second:active {
+  background-color: #82B3D3;
+}
+
+.button-transparent {
+  background: none;
+}
+
+.button-transparent:hover {
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  border: 3px solid #83B3D3;
+}
+
+.button-transparent:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-transparent:disabled {
+  opacity: 0.1;
+}
+
+.button-selected {
+  background: #7DB54F;
+}
+
+.button-second:hover,
+.button-second:focus {
+  background-color: #6C9E42;
+}
+
+.button-second:active {
+  background-color: #7DB54F;
+}
+
+/* navigation */
+.navigation {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* hero */
+.hero {
+  text-align: center;
+}
+.hero-images {
+  background: #c3a190 url("../images/hero-background.jpg") no-repeat;
+  background-position: 100% auto;
+}
+
+.hero-description {
+  background-color: #FFFFFF;
+}
+
+/* advantages */
+.advantages {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+/* search-hotel */
+.search-hotel {
+  text-align: center;
+}
+
+.search-hotel-button {
+  font-size: 20px;
+  line-height: 36px;
+  width: 375px;
+  height: 52px;
+}
+
+/* filter */
+.filter {
+  color: #ffffff;
+  background: #c3a190 url("../images/catalog-background.jpg") no-repeat;
+  background-position: 100% auto;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter fieldset {
+  border: 0;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* accomodations filter */
+.accomodations-filter {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* subscribe */
+.subscribe {
+  text-align: center;
+}
+
+.subscribe-inner {
+  color: #ffffff;
+  background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
+  background-position: 100% 100%;
+}
+
+/* accomodations */
+.accomodations-catalog {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.accomodations-amount {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.catalog-view-list {
+  list-style: none;
+}
+
+.accommodations-list {
+  list-style: none;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.pagination {
+  list-style: none;
+}
+
+.pagination-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+}
+
+.footer-social-list {
+  list-style: none;
+}
+
+.social-link-vk {
+  background: url("../images/icons/social/vk.svg") no-repeat;
+}
+
+.social-link-telegram {
+  background: url("../images/icons/social/telegram.svg") no-repeat;
+}
+
+.social-link-youtube {
+  background: url("../images/icons/social/youtube.svg") no-repeat;
+}
+
+.footer-phone-link {
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: inherit;
+}
