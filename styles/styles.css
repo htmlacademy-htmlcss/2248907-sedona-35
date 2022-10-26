@@ -20,18 +20,63 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
+  margin: 0;
+  height: 100%;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .visually-hidden {
   display: none;
 }
 
-.main h2 {
+.title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.field {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* buttons */
@@ -47,6 +92,7 @@ body {
   padding: 8px 50px;
   border: 0;
   border-radius: 4px;
+  display: inline-block;
 }
 
 .button:disabled {
@@ -55,28 +101,22 @@ body {
 
 .button:active {
   color: rgba(255, 255, 255, 0.3);
-}
-
-.button-basic:hover {
-  background-color: #615048;
-}
-
-.button-basic:focus {
-  background-color: #615048;
-}
-
-.button-basic:active {
   background-color: #756157;
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
 }
 
 .button-second {
   background-color: #82B3D3;
 }
 
-.button-second:hover {
-  background-color: #68A2CA;
-}
-
+.button-second:hover,
 .button-second:focus {
   background-color: #68A2CA;
 }
@@ -118,44 +158,67 @@ body {
   background-color: #7DB54F;
 }
 
-/* navigation */
+/* header */
+.header {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
 .navigation {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation-list {
-  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .navigation-link {
-  color: inherit;
-  text-decoration: none;
+  padding: 20px 16px;
+}
+
+.navigation-pages {
+  max-width: 650px;
+}
+
+.navigation-user {
+  max-width: 300px;
 }
 
 /* hero */
 .hero {
   text-align: center;
 }
+
+.hero-welcome {
+  padding-top: 51px;
+  padding-bottom: 82px;
+}
+
 .hero-images {
-  background: #c3a190 url("../images/hero-background.jpg") no-repeat;
-  background-position: 100% auto;
+  background: #c3a190 url("../images/hero-background.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .hero-description {
   background-color: #FFFFFF;
+  padding-top: 69px;
+  padding-bottom: 90px;
+}
+
+.hero-title {
+  margin-bottom: 25px;
 }
 
 /* advantages */
 .advantages {
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
-}
-
-.advantages-list {
-  list-style: none;
 }
 
 .advantages-title {
@@ -163,51 +226,64 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  display: flex;
+}
+
+.advantages-item:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item.advantages-item-blue {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-text {
+  text-align: center;
+  padding: 103px 85px 114px 85px;
+  width: 230px;
 }
 
 /* search-hotel */
 .search-hotel {
+  background: #ffffff;
   text-align: center;
+  padding: 96px 304px;
+}
+
+.search-hotel-title {
+  margin-bottom: 20px;
+}
+
+.search-hotel-description {
+  margin-bottom: 54px;
 }
 
 .search-hotel-button {
   font-size: 20px;
   line-height: 36px;
   width: 375px;
-  height: 52px;
 }
 
 /* filter */
 .filter {
   color: #ffffff;
   background: #c3a190 url("../images/catalog-background.jpg") no-repeat;
-  background-position: 100% auto;
-}
-
-.filter ul {
-  list-style: none;
+  background-size: cover;
 }
 
 .filter fieldset {
   border: 0;
-}
-
-/* breadcrumbs */
-.breadcrumbs {
-  list-style: none;
-  font-size: 16px;
-  line-height: 21px;
-}
-
-.breadcrumbs-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* accomodations filter */
-.accomodations-filter {
-  font-size: 18px;
-  line-height: 23px;
 }
 
 .filter-title {
@@ -216,21 +292,61 @@ body {
   line-height: 24px;
 }
 
+.filter-buttons {
+  align-self: flex-end;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* accomodations filter */
+.accomodations-filter {
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+}
+
+/* accomodations sorting */
+.accomodations-sorting {
+  display: flex;
+}
+
 /* subscribe */
 .subscribe {
   text-align: center;
+  width: 684px;
+  padding: 96px 258px 104px 258px;
+  color: #ffffff;
+  background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
+  background-size: cover;
 }
 
 .subscribe-inner {
-  color: #ffffff;
-  background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
-  background-position: 100% 100%;
+  color:#000000;
+  background: #ffffff;
+}
+
+.subscribe-title {
+  margin-bottom: 20px;
+}
+
+.subscribe-description {
+  margin-bottom: 54px;
+}
+
+.subscribe-email-field {
+  width: 452px;
+  padding: 12px 20px;
 }
 
 /* accomodations */
 .accomodations-catalog {
   font-size: 18px;
   line-height: 21px;
+  background: #FFFFFF;
 }
 
 .accomodations-amount {
@@ -238,19 +354,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-}
-
-.catalog-view-list {
-  list-style: none;
-}
-
-.accommodations-list {
-  list-style: none;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
+  width: 538px;
 }
 
 .card-title {
@@ -259,22 +363,25 @@ body {
   line-height: 28px;
 }
 
-.pagination {
-  list-style: none;
-}
-
-.pagination-link {
-  color: inherit;
-  text-decoration: none;
-}
-
 /* footer */
 .footer {
+  background: #FFFFFF;
+  font-size: 40px;
+  line-height: 40px;
+  display: flex;
   text-align: center;
 }
 
-.footer-social-list {
-  list-style: none;
+.social-list {
+  width: 184px;
+}
+
+.phone-link {
+  width: 720px;
+}
+
+.htmlacademy-link {
+  margin-left: auto;
 }
 
 .social-link-vk {
@@ -287,11 +394,4 @@ body {
 
 .social-link-youtube {
   background: url("../images/icons/social/youtube.svg") no-repeat;
-}
-
-.footer-phone-link {
-  font-size: 40px;
-  line-height: 40px;
-  text-decoration: none;
-  color: inherit;
 }
