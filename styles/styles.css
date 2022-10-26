@@ -15,10 +15,6 @@
 }
 
 /* common styles */
-html {
-  height: 100%;
-}
-
 body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 22px;
@@ -29,17 +25,21 @@ body {
   height: 100%;
 }
 
-h1, h2, p, ul, li {
-  padding: 0;
-  margin: 0;
-}
-
-.container {
+.page-container {
   width: 1200px;
   margin: 0 auto;
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .visually-hidden {
@@ -57,10 +57,13 @@ h1, h2, p, ul, li {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
 }
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
@@ -76,9 +79,6 @@ h1, h2, p, ul, li {
   box-sizing: border-box;
 }
 
-.main {
-  flex-grow: 1;
-}
 /* buttons */
 .button {
   font-size: 16px;
@@ -161,7 +161,6 @@ h1, h2, p, ul, li {
 /* header */
 .header {
   background-color: #FFFFFF;
-  padding: 0 70px;
   box-sizing: border-box;
 }
 
@@ -184,7 +183,7 @@ h1, h2, p, ul, li {
 }
 
 .navigation-pages {
-  width: 650px;
+  max-width: 650px;
 }
 
 .navigation-user {
@@ -227,6 +226,7 @@ h1, h2, p, ul, li {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .advantages-list {
@@ -258,7 +258,6 @@ h1, h2, p, ul, li {
 .search-hotel {
   background: #ffffff;
   text-align: center;
-  width: 592px;
   padding: 96px 304px;
 }
 
@@ -281,7 +280,6 @@ h1, h2, p, ul, li {
   color: #ffffff;
   background: #c3a190 url("../images/catalog-background.jpg") no-repeat;
   background-size: cover;
-  padding: 70px 35px 43px 70px;
 }
 
 .filter fieldset {
@@ -302,7 +300,6 @@ h1, h2, p, ul, li {
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
-
 }
 
 /* accomodations filter */
@@ -314,13 +311,7 @@ h1, h2, p, ul, li {
 
 /* accomodations sorting */
 .accomodations-sorting {
-  padding: 40px 70px 50px 70px ;
   display: flex;
-}
-
-.catalog-list {
-  padding-left: 70px;
-  padding-right: 70px;
 }
 
 /* subscribe */
@@ -355,6 +346,7 @@ h1, h2, p, ul, li {
 .accomodations-catalog {
   font-size: 18px;
   line-height: 21px;
+  background: #FFFFFF;
 }
 
 .accomodations-amount {
@@ -378,7 +370,6 @@ h1, h2, p, ul, li {
   line-height: 40px;
   display: flex;
   text-align: center;
-  padding: 40px 70px 30px 70px;
 }
 
 .social-list {
@@ -387,7 +378,6 @@ h1, h2, p, ul, li {
 
 .phone-link {
   width: 720px;
-
 }
 
 .htmlacademy-link {
