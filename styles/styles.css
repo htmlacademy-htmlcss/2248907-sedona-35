@@ -51,6 +51,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .page-title {
@@ -191,13 +192,11 @@ body {
 }
 
 /* hero */
-.hero {
-  text-align: center;
-}
-
 .hero-welcome {
   padding-top: 51px;
   padding-bottom: 82px;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-images {
@@ -211,8 +210,13 @@ body {
   padding-bottom: 90px;
 }
 
-.hero-title {
+.hero-title,
+.hero-subtitle {
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  text-align: center;
 }
 
 /* advantages */
@@ -249,24 +253,38 @@ body {
 }
 
 .advantages-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 103px 85px 114px 85px;
-  width: 230px;
+  width: 400px;
+  min-height: 384px;
+}
+
+.advantages-title,
+.advantages-description {
+  max-width: 230px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* search-hotel */
 .search-hotel {
   background: #ffffff;
   text-align: center;
-  padding: 96px 304px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.search-hotel-container {
+  max-width: 592px;
+  margin: 0 auto;
 }
 
 .search-hotel-title {
+  margin-top: 0;
   margin-bottom: 20px;
-}
-
-.search-hotel-description {
-  margin-bottom: 54px;
 }
 
 .search-hotel-button {
@@ -317,11 +335,16 @@ body {
 /* subscribe */
 .subscribe {
   text-align: center;
-  width: 684px;
-  padding: 96px 258px 104px 258px;
   color: #ffffff;
   background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
   background-size: cover;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.subscribe-container {
+  width: 700px;
+  margin: 0 auto;
 }
 
 .subscribe-inner {
@@ -334,7 +357,7 @@ body {
 }
 
 .subscribe-description {
-  margin-bottom: 54px;
+  margin: 0;
 }
 
 .subscribe-email-field {
@@ -370,6 +393,8 @@ body {
   line-height: 40px;
   display: flex;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .social-list {
