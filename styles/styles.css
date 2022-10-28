@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -162,13 +162,12 @@ body {
 /* header */
 .header {
   background-color: #FFFFFF;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 140px 2fr 1fr;
+  display: flex;
 }
 
 .logo {
   display: block;
+  margin-right: 30px;
 }
 
 .navigation {
@@ -194,6 +193,7 @@ body {
 
 .navigation-user {
   max-width: 300px;
+  margin-left: auto;
 }
 
 /* hero */
@@ -384,10 +384,95 @@ body {
   width: 538px;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  width: 340px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+
 .card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.card-desription,
+.card-buttons,
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-rating {
+  margin-bottom: 0;
+}
+
+.card-button {
+  width: 140px;
+  padding: 8px 0;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-item {
+  margin-right: 8px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-link,
+.pagination-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+}
+
+.pagination-more {
+  background: none;
+  color: inherit;
+}
+
+.pagination-item:first-child  .pagination-link {
+  background: #F2F2F2;
+  color: #000000;
 }
 
 /* footer */
