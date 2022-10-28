@@ -432,6 +432,18 @@ body {
   margin-bottom: 0;
 }
 
+.rating-description {
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+  background: #F2F2F2;
+  border-radius: 4px;
+  padding: 8px 22px;
+}
+
 .card-button {
   width: 140px;
   padding: 8px 0;
