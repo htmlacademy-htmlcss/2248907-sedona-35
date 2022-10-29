@@ -10,14 +10,11 @@
   <body>
     <div class="page-container">
       <header class="header container" data-test="header">
+        <a class="header-logo">
+          <img class="logo" src="images/logo-sedona.png" width="138" height="64" alt="Логотип сайта городка Седона">
+        </a>
         <nav class="navigation">
           <ul class="list navigation-list navigation-pages">
-            <li class="navigation-item">
-              <a class="navigation-logo">
-                <img class="page-header-logo" src="images/logo-sedona.png" width="138" height="64"
-                  alt="Логотип сайта городка Седона">
-              </a>
-            </li>
             <li class="navigation-item">
               <a class="link navigation-link navigation-link-current" href="index.html">Главная</a>
             </li>
@@ -28,22 +25,22 @@
               <a class="link navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
-          <ul class="list navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="link navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
-            </li>
-            <li class="navigation-item">
-              <a class="link navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span class="favorites-count">12</span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="button navigation-button" href="#">Хочу сюда!</a>
-            </li>
-          </ul>
         </nav>
+
+        <ul class="list navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="link navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+          </li>
+          <li class="navigation-item">
+            <a class="link navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorites-count">12</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="button navigation-button" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
       </header>
 
       <main class="main" data-test="main">
@@ -118,7 +115,7 @@
 
         <section class="search-hotel">
           <h2 class="title search-hotel-title">Заинтересовались?</h2>
-          <p class="search-hotel-description">Укажите предполагаемые даты поездки,</br>
+          <p class="search-hotel-description">Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="button search-hotel-button" href="#">Поиск гостиницы в Седоне</a>
         </section>
@@ -128,7 +125,8 @@
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Email</label>
-            <input class="field subscribe-email-field" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email">
+            <input class="field subscribe-email-field" type="email" placeholder="Ваш e-mail" name="subscribe-email"
+              id="subscribe-email">
             <button class="button button-second subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
