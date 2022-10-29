@@ -43,7 +43,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .title {
@@ -58,7 +65,8 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .list {
@@ -197,10 +205,15 @@ body {
 }
 
 /* hero */
+.hero {
+  text-align: center;
+}
+
 .hero-welcome {
   padding-top: 51px;
   padding-bottom: 82px;
   display: block;
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -211,17 +224,13 @@ body {
 
 .hero-description {
   background-color: #FFFFFF;
-  padding-top: 69px;
-  padding-bottom: 90px;
+  padding: 69px 275px 90px;
 }
 
 .hero-title,
 .hero-subtitle {
+  margin-top: 0;
   margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
-  text-align: center;
 }
 
 /* advantages */
@@ -277,13 +286,7 @@ body {
 .search-hotel {
   background: #ffffff;
   text-align: center;
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
-.search-hotel-container {
-  max-width: 592px;
-  margin: 0 auto;
+  padding: 96px 304px;
 }
 
 .search-hotel-title {
@@ -294,46 +297,84 @@ body {
 .search-hotel-button {
   font-size: 20px;
   line-height: 36px;
-  width: 375px;
+  min-width: 375px;
 }
 
 /* filter */
 .filter {
+  padding: 35px 43px 70px 70px;
   color: #ffffff;
   background: #c3a190 url("../images/catalog-background.jpg") no-repeat;
   background-size: cover;
 }
 
-.filter fieldset {
+.accomodations-filter {
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-left,
+.container-right {
+  display: flex;
+}
+
+.filter-group {
   border: 0;
+  padding: 0;
+  margin-right: 70px;
+}
+
+.filter-group:last-child {
+  margin-right: 0;
 }
 
 .filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.filter-item {
+  margin-bottom: 16px;
+}
+
+.filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.filter-price {
+  min-width: 288px;
+  margin-right: 70px;
 }
 
 .filter-buttons {
-  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-buttons > .button {
+  margin-bottom: 32px;
 }
 
 /* breadcrumbs */
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-/* accomodations filter */
-.accomodations-filter {
-  font-size: 18px;
-  line-height: 23px;
-  display: flex;
+.breadcrumbs-item {
+  margin-right: 28px;
 }
 
-/* accomodations sorting */
-.accomodations-sorting {
-  display: flex;
+.breadcrumbs-item:last-child {
+  margin-right: 0;
 }
 
 /* subscribe */
@@ -342,13 +383,7 @@ body {
   color: #ffffff;
   background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
   background-size: cover;
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
-.subscribe-container {
-  width: 700px;
-  margin: 0 auto;
+  padding: 96px 258px 104px;
 }
 
 .subscribe-inner {
@@ -356,24 +391,35 @@ body {
   background: #ffffff;
 }
 
+.subscribe-form {
+  display: flex;
+}
+
 .subscribe-title {
   margin-bottom: 20px;
 }
 
 .subscribe-description {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 54px;
 }
 
 .subscribe-email-field {
   width: 452px;
   padding: 12px 20px;
+  border-radius: 4px 0 0 4px;
 }
 
-/* accomodations */
-.accomodations-catalog {
-  font-size: 18px;
-  line-height: 21px;
-  background: #FFFFFF;
+.subscribe-button {
+  border-radius: 0 4px 4px 0;
+}
+
+/* accomodations sorting */
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .accomodations-amount {
@@ -381,7 +427,41 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  width: 538px;
+  margin: 0;
+}
+
+.catalog-settings {
+  display: flex;
+}
+
+.catalog-sorting {
+  margin-right: 70px;
+}
+
+.catalog-view-list {
+  display: flex;
+}
+
+.catalog-view-item {
+  box-sizing: border-box;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 8px;
+}
+
+.catalog-view-current {
+  border-color: #000000;
+}
+
+/* accomodations */
+.accomodations-catalog {
+  font-size: 18px;
+  line-height: 21px;
+  background: #FFFFFF;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 .catalog-list {
