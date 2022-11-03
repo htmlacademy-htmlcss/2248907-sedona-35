@@ -86,6 +86,8 @@ body {
   line-height: 24px;
   border-radius: 4px;
   box-sizing: border-box;
+  border: none;
+  margin: 0;
 }
 
 /* buttons */
@@ -99,9 +101,12 @@ body {
   background-color: #756157;
   text-align: center;
   padding: 8px 50px;
-  border: 0;
+  border: none;
+  cursor: pointer;
   border-radius: 4px;
   display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .button:hover {
@@ -182,7 +187,6 @@ body {
 .navigation {
   font-weight: 700;
   font-size: 20px;
-  line-height: 24px;
 }
 
 .navigation-list {
@@ -194,15 +198,49 @@ body {
 .navigation-link {
   display: block;
   padding: 20px 16px;
+  position: relative;
+}
+
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 16px;
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation-pages {
-  max-width: 650px;
+  max-width: 550px;
 }
 
 .navigation-user {
-  max-width: 300px;
+  max-width: 350px;
   margin-left: auto;
+}
+
+.favorites-count {
+  position: absolute;
+  font-size: 10px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  top: 12px;
+  right: 6px;
+}
+
+.navigation-button {
+  margin-left: 20px;
 }
 
 /* hero */
@@ -229,7 +267,6 @@ body {
   width: 100%;
   height: 57px;
   background: url("../images/hero-divider.svg") no-repeat center;
-  z-index: 1;
 }
 
 .hero-description {
