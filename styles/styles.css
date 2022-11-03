@@ -80,7 +80,8 @@ body {
   text-decoration: none;
 }
 
-.field {
+.input-control,
+.select-control {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -88,6 +89,11 @@ body {
   box-sizing: border-box;
   border: none;
   margin: 0;
+}
+
+.select-control {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 /* buttons */
@@ -292,6 +298,26 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 62px;
+  position: relative;
+}
+
+.advantages-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.3);
+  bottom: -40px;
+  right: 85px;
+}
+
+.advantages-item-blue .advantages-title::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item-icon .advantages-title::after {
+  background: none;
 }
 
 .advantages-list {
@@ -308,7 +334,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item.advantages-item-blue {
+.advantages-item-blue {
   background-color: #82B3D3;
   color: #FFFFFF;
 }
@@ -455,6 +481,11 @@ body {
   width: 452px;
   padding: 12px 20px;
   border-radius: 4px 0 0 4px;
+}
+
+.subscribe-inner .subscribe-email-field {
+  background-color: #F2F2F2;
+  color: #000000;
 }
 
 .subscribe-button {
@@ -617,10 +648,6 @@ body {
   padding-bottom: 30px;
 }
 
-.social-list {
-  width: 184px;
-}
-
 .phone-link {
   width: 720px;
 }
@@ -629,14 +656,26 @@ body {
   margin-left: auto;
 }
 
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 190px;
+}
+
+.social-link {
+  display: block;
+  width: 47px;
+  height: 40px;
+}
+
 .social-link-vk {
-  background: url("../images/icons/social/vk.svg") no-repeat;
+  background: url("../images/icons/social/vk.svg") no-repeat center;
 }
 
 .social-link-telegram {
-  background: url("../images/icons/social/telegram.svg") no-repeat;
+  background: url("../images/icons/social/telegram.svg") no-repeat center;
 }
 
 .social-link-youtube {
-  background: url("../images/icons/social/youtube.svg") no-repeat;
+  background: url("../images/icons/social/youtube.svg") no-repeat center;
 }
