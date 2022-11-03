@@ -104,15 +104,6 @@ body {
   display: inline-block;
 }
 
-.button:disabled {
-  background-color: #E5E5E5;
-}
-
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #756157;
-}
-
 .button:hover {
   background-color: #615048;
 }
@@ -121,16 +112,25 @@ body {
   background-color: #615048;
 }
 
-.button-second {
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+}
+
+.button-blue {
   background-color: #82B3D3;
 }
 
-.button-second:hover,
-.button-second:focus {
+.button-blue:hover,
+.button-blue:focus {
   background-color: #68A2CA;
 }
 
-.button-second:active {
+.button-blue:active {
   background-color: #82B3D3;
 }
 
@@ -154,16 +154,16 @@ body {
   opacity: 0.1;
 }
 
-.button-selected {
+.button-green {
   background: #7DB54F;
 }
 
-.button-second:hover,
-.button-second:focus {
+.button-green:hover,
+.button-green:focus {
   background-color: #6C9E42;
 }
 
-.button-second:active {
+.button-green:active {
   background-color: #7DB54F;
 }
 
@@ -176,6 +176,7 @@ body {
 .logo {
   display: block;
   margin-right: 30px;
+  transform: scale(1.2);
 }
 
 .navigation {
@@ -220,6 +221,15 @@ body {
 .hero-images {
   background: #c3a190 url("../images/hero-background.jpg") no-repeat center;
   background-size: cover;
+}
+
+.hero-images::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 57px;
+  background: url("../images/hero-divider.svg") no-repeat center;
+  z-index: 1;
 }
 
 .hero-description {
