@@ -93,20 +93,14 @@ body {
 
 .select-control {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  background: transparent;
+  background: url("../images/icons/arrow-dark.svg") no-repeat;
+  background-position: calc(100% - 20px) 50%;
   border: 2px solid #E5E5E5;
   padding-right: 131px;
   padding-left: 20px;
-  position: relative;
-}
-
-.select-control::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 12;
-  height: 7;
-  background: url("../images/icons/arrow.svg") no-repeat;
 }
 
 /* buttons */
@@ -201,6 +195,8 @@ body {
   display: block;
   margin-right: 30px;
   transform: scale(1.2);
+  z-index: 2;
+  position: relative;
 }
 
 .navigation {
@@ -486,14 +482,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  align-items: center;
 }
 
 .breadcrumbs-item {
   margin-right: 28px;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/arrow-light.svg") no-repeat;
+  background-size: contain;
+  width: 8px;
+  height: 20px;
+  right: -20px;
+  top: 1px
 }
 
 .breadcrumbs-item:last-child {
   margin-right: 0;
+}
+
+.breadcrumbs-link-home {
+  padding-top: 1px;
+  display: block;
 }
 
 /* subscribe */
