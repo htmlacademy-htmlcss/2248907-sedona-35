@@ -232,6 +232,7 @@ body {
   width: calc(100% - 32px);
   height: 2px;
   background-color: #756257;
+  z-index: 2;
 }
 
 .navigation-pages {
@@ -293,7 +294,7 @@ body {
 
 .hero-description {
   background-color: #FFFFFF;
-  padding: 69px 275px 90px;
+  padding: 69px 270px 90px;
 }
 
 .hero-title,
@@ -306,34 +307,6 @@ body {
 .advantages {
   font-size: 18px;
   line-height: 21px;
-}
-
-.advantages-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 62px;
-  position: relative;
-}
-
-.advantages-title::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 60px;
-  background: rgba(0, 0, 0, 0.3);
-  bottom: -40px;
-  right: 85px;
-}
-
-.advantages-item-blue .advantages-title::after {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.advantages-item-icon .advantages-title::after {
-  background: none;
 }
 
 .advantages-list {
@@ -362,13 +335,70 @@ body {
   text-align: center;
   width: 400px;
   min-height: 384px;
+  position: relative;
 }
 
-.advantages-title,
+.advantages-text::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.3);
+  order: 2;
+  margin-bottom: 30px;
+  align-self: center;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  order: 1;
+  max-width: 230px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 .advantages-description {
   max-width: 230px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  order: 3;
+}
+
+.advantages-item-blue .advantages-text::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item-icon .advantages-text::after {
+  content: "";
+  display: block;
+  background: none;
+  order: 1;
+  width: 75px;
+  height: 72px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages-item-icon.icon-home .advantages-text::after {
+  background-image: url("../images/icons/home.svg");
+}
+
+.advantages-item-icon.icon-food .advantages-text::after {
+  background-image: url("../images/icons/food.svg");
+}
+
+.advantages-item-icon.icon-gift .advantages-text::after {
+  background-image: url("../images/icons/gift.svg");
+}
+
+.advantages-item-icon .advantages-title {
+  order: 2;
+}
+
+.advantages-description {
+  order: 3;
 }
 
 /* search-hotel */
