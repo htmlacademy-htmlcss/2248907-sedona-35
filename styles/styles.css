@@ -107,7 +107,6 @@ body {
   color:#000000;
 }
 
-
 .select-control:active {
   border: 2px solid #3F5E72;
 }
@@ -212,12 +211,15 @@ body {
   display: flex;
 }
 
-.logo {
-  display: block;
-  margin-right: 30px;
-  transform: scale(1.2);
-  z-index: 2;
+.logo-link {
+  margin-right: 168px;
   position: relative;
+}
+
+.logo {
+  margin-right: 30px;
+  z-index: 2;
+  position: absolute;
 }
 
 .navigation {
