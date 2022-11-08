@@ -171,6 +171,83 @@ body {
   left: 5px;
 }
 
+/* range */
+.range-wrapper-inputs {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.range-from,
+.range-to {
+  width: 143px;
+  position: relative;
+}
+
+.range-from {
+  margin-right: 2px;
+}
+
+.range-input {
+  padding: 12px 40px 12px 20px;
+  outline: none;
+  width: 100%;
+}
+
+.range-label {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  top: 12px;
+  right: 20px;
+}
+
+.range-from .range-input {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-to .range-input {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.range-input {
+  -moz-appearance: textfield;
+}
+
+.range-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background: #FFFFFF;
+}
+
+.range-toggle {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -8px;
+}
+
+.toggle-max {
+  left: 226px;
+}
+
 /* buttons */
 .button {
   font-size: 16px;
@@ -539,6 +616,8 @@ body {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  margin-top: 55px;
+  width: 191px;
 }
 
 .filter-buttons > .button {
