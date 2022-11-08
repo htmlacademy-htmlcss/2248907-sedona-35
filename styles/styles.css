@@ -98,10 +98,13 @@ body {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
+  line-height: inherit;
   background: url("../images/icons/arrow-bottom-dark.svg") no-repeat;
   background-position: calc(100% - 20px) 50%;
   border: 2px solid #E5E5E5;
-  padding-right: 131px;
+  width: 292px;
+  box-sizing: border-box;
+  padding-right: 40px;
   padding-left: 20px;
   cursor: pointer;
   color:#000000;
