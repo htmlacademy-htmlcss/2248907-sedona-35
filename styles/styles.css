@@ -82,6 +82,7 @@ body {
   cursor: pointer;
 }
 
+/* input*/
 .input-control,
 .select-control {
   font-family: "PT Sans", Arial, sans-serif;
@@ -93,6 +94,7 @@ body {
   margin: 0;
 }
 
+/*select*/
 .select-control {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -124,6 +126,49 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
   background-image: url("../images/icons/arrow-bottom-light.svg");
+}
+
+/* checkbox and radiobutton */
+.control {
+  display: flex;
+  align-items: center;
+}
+
+.control-label {
+  cursor: pointer;
+}
+
+.control-mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.control-input[type="checkbox"] ~ .control-mark {
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked ~ .control-mark {
+  background: #FFFFFF url("../images/icons/tick.svg") no-repeat center;
+}
+
+.control-input[type="radio"] ~ .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked ~ .control-mark::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 /* buttons */
