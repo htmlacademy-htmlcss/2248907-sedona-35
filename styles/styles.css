@@ -140,12 +140,27 @@ body {
 
 .control-mark {
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   background: #FFFFFF;
   margin-right: 16px;
   cursor: pointer;
   position: relative;
+}
+
+.control:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control-input:disabled ~ .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 0.3;
+  cursor: default;
 }
 
 .control-input[type="checkbox"] ~ .control-mark {
@@ -189,8 +204,20 @@ body {
 
 .range-input {
   padding: 12px 40px 12px 20px;
-  outline: none;
-  width: 100%;
+  width: 143px;
+  height: 48px;
+}
+
+.range-input:hover {
+  background: #E6E6E6;
+}
+
+.range-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-input:active {
+  border: 2px solid #000000;
 }
 
 .range-label {
@@ -242,6 +269,22 @@ body {
   cursor: pointer;
   position: absolute;
   top: -8px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: none;
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
 
 .toggle-max {
