@@ -1125,7 +1125,16 @@ body {
 
 .input-notice {
   position: absolute;
-  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+.notice-red {
+  color: #FF5757;
 }
 
 .input-plus-minus {
