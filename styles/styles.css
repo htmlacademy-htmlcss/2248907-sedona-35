@@ -1109,6 +1109,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  display: flex;
 }
 
 .date-input {
@@ -1197,4 +1198,61 @@ body {
   padding-bottom: 15px;
   font-size: 20px;
   line-height: 24px;
+}
+
+/* tooltip */
+.tooltip {
+  margin-left: 10px;
+  position: relative;
+}
+
+.tooltip-toggle {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 26px;
+  height: 26px;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  display: none;
+  width: 256px;
+  position: absolute;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+  text-transform: none;
+  top: 40px;
+  left: -115px;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 19px;
+  height: 9px;
+  background: url(../images/icons/tooltip-arrow.svg) no-repeat;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
