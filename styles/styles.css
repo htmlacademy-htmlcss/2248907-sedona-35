@@ -613,6 +613,11 @@ body {
   min-width: 375px;
 }
 
+.search-hotel-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
 /* filter */
 .filter {
   padding: 35px 43px 70px 70px;
@@ -759,7 +764,7 @@ body {
 
 .subscribe-email-field {
   width: 452px;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: 4px 0 0 4px;
 }
 
@@ -770,6 +775,7 @@ body {
 
 .subscribe-button {
   border-radius: 0 4px 4px 0;
+  width: 232px;
 }
 
 /* accomodations sorting */
