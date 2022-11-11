@@ -301,7 +301,7 @@ body {
   color: #ffffff;
   background-color: #756157;
   text-align: center;
-  padding: 8px 50px;
+  padding: 8px 20px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -377,6 +377,9 @@ body {
 .header {
   background-color: #FFFFFF;
   display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .logo-link {
@@ -448,6 +451,7 @@ body {
 
 .navigation-button {
   margin-left: 20px;
+  width: 160px;
 }
 
 /* hero */
@@ -455,38 +459,42 @@ body {
   text-align: center;
 }
 
-.hero-welcome {
-  padding-top: 51px;
-  padding-bottom: 82px;
-  display: block;
-  margin: 0 auto;
-}
-
 .hero-images {
   background: #c3a190 url("../images/hero-background.jpg") no-repeat center;
   background-size: cover;
   position: relative;
+  height: 484px;
+}
+
+.hero-welcome {
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
 }
 
 .hero-images::after {
   content: "";
   display: block;
   width: 100%;
-  height: 57px;
+  height: 60px;
   background: url("../images/hero-divider.svg") no-repeat center;
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
+  left: 0;
 }
 
 .hero-description {
   background-color: #FFFFFF;
-  padding: 69px 270px 90px;
+  padding: 70px 270px 90px;
 }
 
-.hero-title,
-.hero-subtitle {
+.hero-title {
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+.hero-subtitle {
+  margin: 0;
 }
 
 /* advantages */
@@ -1255,8 +1263,8 @@ body {
   height: 9px;
   background: url(../images/icons/tooltip-arrow.svg) no-repeat;
   bottom: 100%;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
