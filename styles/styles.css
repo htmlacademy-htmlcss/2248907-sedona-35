@@ -400,7 +400,6 @@ body {
 
 .navigation-list {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -408,6 +407,14 @@ body {
   display: block;
   padding: 20px 16px;
   position: relative;
+}
+
+.navigation-user .navigation-link {
+  padding: 22px 12px 18px;
+}
+
+.navigation-icon {
+  display: block;
 }
 
 .navigation-link-current {
@@ -445,12 +452,13 @@ body {
   border-radius: 50%;
   display: block;
   text-align: center;
-  top: 12px;
-  right: 6px;
+  top: 11px;
+  right: 4px;
 }
 
 .navigation-button {
   margin-left: 20px;
+  margin-top: 14px;
   width: 160px;
 }
 
@@ -463,7 +471,7 @@ body {
   background: #c3a190 url("../images/hero-background.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  height: 484px;
+  height: 485px;
 }
 
 .hero-welcome {
@@ -476,16 +484,16 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 60px;
+  height: 59px;
   background: url("../images/hero-divider.svg") no-repeat center;
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
 }
 
 .hero-description {
   background-color: #FFFFFF;
-  padding: 70px 270px 90px;
+  padding: 69px 270px 90px;
 }
 
 .hero-title {
