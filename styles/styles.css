@@ -503,6 +503,7 @@ body {
 
 .hero-subtitle {
   margin: 0;
+  color: #333333;
 }
 
 /* advantages */
@@ -533,11 +534,16 @@ body {
 .advantages-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   width: 400px;
   min-height: 384px;
   position: relative;
+  box-sizing: border-box;
+  padding-top: 103px;
+}
+
+.advantages-item-icon .advantages-text {
+  padding-top: 77px;
 }
 
 .advantages-text::after {
@@ -557,7 +563,7 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   order: 1;
-  max-width: 230px;
+  max-width: 175px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -566,6 +572,16 @@ body {
   max-width: 230px;
   margin: 0 auto;
   order: 3;
+  color: #333333;
+}
+
+.advantages-item-blue .advantages-text {
+  padding-top: 92px;
+  color: #FFFFFF;
+}
+
+.advantages-item-blue .advantages-description {
+  color: #FFFFFF;
 }
 
 .advantages-item-blue .advantages-text::after {
@@ -575,12 +591,12 @@ body {
 .advantages-item-icon .advantages-text::after {
   content: "";
   display: block;
-  background: none;
-  order: 1;
   width: 75px;
-  height: 72px;
-  background-size: contain;
+  height: 75px;
+  background-color: inherit;
   background-repeat: no-repeat;
+  background-position: center;
+  order: 1;
 }
 
 .advantages-item-icon.icon-home .advantages-text::after {
@@ -599,10 +615,6 @@ body {
   order: 2;
 }
 
-.advantages-description {
-  order: 3;
-}
-
 /* search-hotel */
 .search-hotel {
   background: #ffffff;
@@ -618,12 +630,13 @@ body {
 .search-hotel-button {
   font-size: 20px;
   line-height: 36px;
-  min-width: 375px;
+  min-width: 376px;
 }
 
 .search-hotel-description {
   margin: 0;
   margin-bottom: 54px;
+  color: #333333;
 }
 
 /* filter */
@@ -745,11 +758,14 @@ body {
 
 /* subscribe */
 .subscribe {
+  display: grid;
   text-align: center;
+  justify-content: center;
   color: #ffffff;
   background: #c3a190 url("../images/subscribe-background.jpg") no-repeat;
   background-size: cover;
-  padding: 96px 258px 104px;
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 .subscribe-inner {
@@ -767,7 +783,7 @@ body {
 
 .subscribe-description {
   margin-top: 0;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 
 .subscribe-email-field {
@@ -784,6 +800,7 @@ body {
 .subscribe-button {
   border-radius: 0 4px 4px 0;
   width: 232px;
+  font-size: 17px;
 }
 
 /* accomodations sorting */
@@ -984,16 +1001,16 @@ body {
   line-height: 40px;
   display: flex;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 45px;
   padding-bottom: 30px;
 }
 
 .phone-link {
-  width: 720px;
+  flex-grow: 1;
 }
 
 .htmlacademy-link {
-  margin-left: auto;
+  padding-top: 2px;
 }
 
 .htmlacademy-link svg {
