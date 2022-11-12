@@ -1110,10 +1110,9 @@ body {
   display: none;
 }
 
-
 .modal-close-button {
   position: absolute;
-  top: 64px;
+  top: 66px;
   right: 52px;
   width: 52px;
   height: 52px;
@@ -1155,7 +1154,7 @@ body {
 
 .field-group {
   display: flex;
-  gap: 49px;
+  gap: 47px;
   align-items: center;
 }
 
@@ -1179,7 +1178,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 40px 12px 20px;
+  padding: 13px 40px 11px 20px;
 }
 
 .input-notice {
@@ -1262,10 +1261,11 @@ body {
 }
 
 .search-button {
-  padding-top: 15px;
+  padding-top: 21px;
   padding-bottom: 15px;
   font-size: 20px;
   line-height: 24px;
+  border-radius: 10px;
 }
 
 /* tooltip */
@@ -1299,11 +1299,11 @@ body {
   background: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 22px 22px;
   box-sizing: border-box;
   text-transform: none;
-  top: 40px;
-  left: -115px;
+  top: 41px;
+  left: -114px;
 }
 
 .tooltip-text::after {
