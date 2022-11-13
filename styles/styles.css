@@ -149,7 +149,7 @@ body {
   position: relative;
 }
 
-.control:focus {
+.control-input:focus ~ .control-mark {
   outline: 3px solid #83b3d3;
 }
 
@@ -293,6 +293,7 @@ body {
 
 /* buttons */
 .button {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -333,6 +334,7 @@ body {
 
 .button-blue:hover,
 .button-blue:focus {
+  outline: none;
   background-color: #68A2CA;
 }
 
@@ -341,7 +343,8 @@ body {
 }
 
 .button-transparent {
-  background: none;
+  background-color: transparent;
+  border: 3px solid transparent;
 }
 
 .button-transparent:hover {
@@ -349,6 +352,7 @@ body {
 }
 
 .button-transparent:focus {
+  outline: none;
   border: 3px solid #83B3D3;
 }
 
@@ -366,6 +370,7 @@ body {
 
 .button-green:hover,
 .button-green:focus {
+  outline: none;
   background-color: #6C9E42;
 }
 
@@ -641,7 +646,7 @@ body {
 
 /* filter */
 .filter {
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 67px 70px;
   color: #ffffff;
   background: #c3a190 url("../images/catalog-background.jpg") no-repeat;
   background-size: cover;
@@ -699,12 +704,8 @@ body {
   width: 191px;
 }
 
-.filter-buttons > .button {
-  font-size: 14px;
-}
-
 .filter-buttons > .button:not(:last-of-type) {
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 }
 
 /* breadcrumbs */
@@ -774,6 +775,7 @@ body {
 }
 
 .subscribe-inner {
+  padding-top: 97px;
   color: #000000;
   background: #ffffff;
 }
@@ -805,7 +807,8 @@ body {
 .subscribe-button {
   border-radius: 0 4px 4px 0;
   width: 232px;
-  font-size: 17px;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 /* accomodations sorting */
@@ -895,7 +898,7 @@ body {
   background-color: #E6E6E6;
   grid-column: 1 / -1;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .card {
