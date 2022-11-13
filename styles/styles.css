@@ -618,6 +618,7 @@ body {
   position: relative;
   box-sizing: border-box;
   padding-top: 103px;
+  padding-bottom: 40px;
 }
 
 .advantages-item-icon .advantages-text {
@@ -742,10 +743,6 @@ body {
   padding: 0;
   margin: 0;
   margin-right: 70px;
-}
-
-.filter-group:last-child {
-  margin-right: 0;
 }
 
 .filter-title {
