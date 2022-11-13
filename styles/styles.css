@@ -90,8 +90,39 @@ body {
   line-height: 24px;
   border-radius: 4px;
   box-sizing: border-box;
-  border: none;
+  border: 3px solid transparent;
   margin: 0;
+}
+
+.input-control {
+  background-color: #F2F2F2;
+}
+
+.input-control::placeholder{
+  opacity: 0.6;
+}
+
+.input-control:hover {
+  background-color: #E6E6E6;
+}
+
+.input-control:focus-visible {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .input-control:focus {
+    background-color: #E6E6E6;
+    border: 3px solid #83B3D3;
+    outline: none;
+  }
+}
+
+.input-control:active {
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
 }
 
 /*select*/
@@ -117,9 +148,16 @@ body {
 }
 
 .select-control:hover,
-.select-control:focus {
+.select-control:focus-visible {
   border: 2px solid #68A2CA;
   outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .select-control:focus {
+    border: 2px solid #68A2CA;
+    outline: none;
+  }
 }
 
 .select-control:disabled {
@@ -149,8 +187,14 @@ body {
   position: relative;
 }
 
-.control-input:focus ~ .control-mark {
+.control-input:focus-visible ~ .control-mark {
   outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .control-input:focus ~ .control-mark {
+    outline: 3px solid #83b3d3;
+  }
 }
 
 .control:hover {
@@ -203,21 +247,12 @@ body {
 }
 
 .range-input {
-  padding: 12px 40px 12px 20px;
+  padding: 9px 40px 8px 17px;
   width: 143px;
-  height: 48px;
-}
-
-.range-input:hover {
-  background: #E6E6E6;
-}
-
-.range-input:focus {
-  outline: 3px solid #83B3D3;
 }
 
 .range-input:active {
-  border: 2px solid #000000;
+  padding: 10px 41px 9px 18px;
 }
 
 .range-label {
@@ -275,10 +310,18 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   outline: none;
   border: 3px solid #83B3D3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@supports not selector(:focus-visible) {
+  .range-toggle:focus {
+    outline: none;
+    border: 3px solid #83B3D3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .range-toggle:active {
@@ -315,8 +358,16 @@ body {
   background-color: #615048;
 }
 
-.button:focus {
+.button:focus-visible {
   background-color: #615048;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .button:focus {
+    background-color: #615048;
+
+  }
 }
 
 .button:active {
@@ -333,9 +384,16 @@ body {
 }
 
 .button-blue:hover,
-.button-blue:focus {
+.button-blue:focus-visible {
   outline: none;
   background-color: #68A2CA;
+}
+
+@supports not selector(:focus-visible) {
+  .button-blue:focus {
+    outline: none;
+    background-color: #68A2CA;
+  }
 }
 
 .button-blue:active {
@@ -351,9 +409,16 @@ body {
   opacity: 0.6;
 }
 
-.button-transparent:focus {
+.button-transparent:focus-visible {
   outline: none;
   border: 3px solid #83B3D3;
+}
+
+@supports not selector(:focus-visible) {
+  .button-transparent:focus {
+    outline: none;
+    border: 3px solid #83B3D3;
+  }
 }
 
 .button-transparent:active {
@@ -369,10 +434,18 @@ body {
 }
 
 .button-green:hover,
-.button-green:focus {
+.button-green:focus-visible {
   outline: none;
   background-color: #6C9E42;
 }
+
+@supports not selector(:focus-visible) {
+  .button-green:focus {
+    outline: none;
+    background-color: #6C9E42;
+  }
+}
+
 
 .button-green:active {
   background-color: #7DB54F;
@@ -795,8 +868,12 @@ body {
 
 .subscribe-email-field {
   width: 452px;
-  padding: 14px 20px;
+  padding: 11px 18px;
   border-radius: 4px 0 0 4px;
+}
+
+.subscribe-email-field:active {
+  padding: 12px 19px;
 }
 
 .subscribe-inner .subscribe-email-field {
@@ -855,7 +932,7 @@ body {
   border: 2px solid #000000;
 }
 
-.catalog-view-item:focus {
+.catalog-view-item:focus-within {
   border: 2px solid #68A2CA;
   outline: none;
 }
@@ -873,6 +950,10 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.catalog-view-link:focus {
+  outline: none;
 }
 
 .view-icon {
@@ -1021,9 +1102,13 @@ body {
 }
 
 .pagination-item:not(:first-child):hover .pagination-link,
-.pagination-item:not(:first-child):focus .pagination-link {
+.pagination-item:not(:first-child):focus-within .pagination-link {
   background: #68A2CA;
   border: 1px solid #82B3D3;
+}
+
+.pagination-link:focus {
+  outline: none;
 }
 
 /* footer */
@@ -1054,8 +1139,22 @@ body {
 }
 
 .htmlacademy-link:hover svg,
-.htmlacademy-link:focus svg {
+.htmlacademy-link:focus-visible svg {
   fill: #756157;
+}
+
+.htmlacademy-link:focus-visible {
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .htmlacademy-link:focus svg {
+    fill: #756157;
+  }
+
+  .htmlacademy-link:focus {
+    outline: none;
+  }
 }
 
 .phone-link:active {
@@ -1063,8 +1162,16 @@ body {
 }
 
 .phone-link:hover,
-.phone-link:focus {
+.phone-link:focus-visible {
   color: #756157;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .phone-link:focus {
+    color: #756157;
+    outline: none;
+  }
 }
 
 .social-list {
@@ -1090,8 +1197,22 @@ body {
 }
 
 .social-link:hover svg,
-.social-link:focus svg {
+.social-link:focus-visible svg {
   fill: #68A2CA;
+}
+
+.social-link:focus-visible {
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .social-link:focus svg {
+    fill: #68A2CA;
+  }
+
+  .social-link:focus {
+    outline: none;
+  }
 }
 
 .modal-container {
@@ -1139,9 +1260,16 @@ body {
   background: #E6E6E6;
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus-visible {
   background: #E6E6E6;
   border: 3px solid #83B3D3;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-close-button:focus {
+    background: #E6E6E6;
+    border: 3px solid #83B3D3;
+  }
 }
 
 .modal-close-button:active .button-close-icon {
@@ -1184,13 +1312,18 @@ body {
 
 .date-input {
   background: #F2F2F2 url("../images/icons/calendar.svg") no-repeat;
-  background-position: calc(100% - 20px) 12px;
+  background-position: calc(100% - 16px) 9px;
   border-radius: 4px;
   width: 440px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 13px 40px 11px 20px;
+  padding: 9px 40px 9px 16px;
+}
+
+.date-input:active {
+  padding: 10px 41px 10px 17px;
+  background-position: calc(100% - 17px) 10px;
 }
 
 .input-notice {
@@ -1221,9 +1354,13 @@ body {
   order: 2;
   border-radius: 0;
   outline: none;
-  padding: 14px 10px;
+  padding: 14px 6px;
   line-height: 20px;
   font-weight: 700;
+}
+
+.count-input:active {
+  padding: 15px 7px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -1257,10 +1394,18 @@ body {
   fill-opacity: 0.3;
 }
 
-.count-button:focus .button-icon {
+.count-button:focus-visible .button-icon {
   fill: #000000;
   fill-opacity: 1;
   border: 3px solid #82B3D3;
+}
+
+@supports not selector(:focus-visible) {
+  .count-button:focus .button-icon {
+    fill: #000000;
+    fill-opacity: 1;
+    border: 3px solid #82B3D3;
+  }
 }
 
 .count-button:hover .button-icon {
@@ -1273,8 +1418,8 @@ body {
 }
 
 .search-button {
-  padding-top: 21px;
-  padding-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   font-size: 20px;
   line-height: 24px;
   border-radius: 10px;
@@ -1333,6 +1478,12 @@ body {
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus-visible + .tooltip-text {
   display: block;
+}
+
+@supports not selector(:focus-visible) {
+  .tooltip-toggle:focus + .tooltip-text {
+    display: block;
+  }
 }
