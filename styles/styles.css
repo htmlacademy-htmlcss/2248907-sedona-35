@@ -1299,12 +1299,15 @@ body {
   margin-left: auto;
 }
 
+.field-column {
+  display: flex;
+}
+
 .search-form .input-label {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  display: flex;
 }
 
 .date-input {
