@@ -249,6 +249,7 @@ body {
 .range-input {
   padding: 9px 40px 8px 17px;
   width: 143px;
+  font-weight: 700;
 }
 
 .range-input:active {
@@ -1020,10 +1021,11 @@ body {
 }
 
 .rating-stars {
-  background-image: url("../images/icons/star.svg");
-  background-repeat: space;
+  background: url("../images/icons/star.svg") no-repeat;
+  background-position: 0 -10px;
   height: 17px;
   align-self: center;
+  width: 20px;
 }
 
 .rating-stars-2 {
@@ -1031,11 +1033,15 @@ body {
 }
 
 .rating-stars-3 {
-  width: 60px;
+  width: 70px;
 }
 
 .rating-stars-4 {
-  width: 80px;
+  width: 90px;
+}
+
+.rating-stars-5 {
+  width: 120px;
 }
 
 .rating-description {
