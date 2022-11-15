@@ -422,36 +422,36 @@ body {
   background-color: #82B3D3;
 }
 
-.button-reset {
+.button-transparent {
   background-color: transparent;
   border: 3px solid transparent;
 }
 
-.button-reset:hover {
+.button-transparent:hover {
   background-color: transparent;
   opacity: 0.6;
 }
 
-.button-reset:focus-visible {
+.button-transparent:focus-visible {
   background-color: transparent;
   border: 3px solid #83B3D3;
   outline: none;
 }
 
 @supports not selector(:focus-visible) {
-  .button-reset:focus {
+  .button-transparent:focus {
     background-color: transparent;
     border: 3px solid #83B3D3;
     outline: none;
   }
 }
 
-.button-reset:active {
+.button-transparent:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
-.button-reset:disabled {
+.button-transparent:disabled {
   background-color: transparent;
   opacity: 0.1;
 }
@@ -889,10 +889,6 @@ body {
 
 .breadcrumbs-link:hover .home-icon {
   fill: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-link:focus-visible {
-  outline: none;
 }
 
 .breadcrumbs-link:active {
