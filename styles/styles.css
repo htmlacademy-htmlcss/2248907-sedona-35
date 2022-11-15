@@ -419,32 +419,32 @@ body {
   background-color: #82B3D3;
 }
 
-.button-transparent {
+.button-reset {
   background-color: transparent;
   border: 3px solid transparent;
 }
 
-.button-transparent:hover {
+.button-reset:hover {
   opacity: 0.6;
 }
 
-.button-transparent:focus-visible {
+.button-reset:focus-visible {
   border: 3px solid #83B3D3;
   outline: none;
 }
 
 @supports not selector(:focus-visible) {
-  .button-transparent:focus {
+  .button-reset:focus {
     border: 3px solid #83B3D3;
     outline: none;
   }
 }
 
-.button-transparent:active {
+.button-reset:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-transparent:disabled {
+.button-reset:disabled {
   opacity: 0.1;
 }
 
