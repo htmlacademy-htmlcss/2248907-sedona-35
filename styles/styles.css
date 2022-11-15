@@ -513,6 +513,16 @@ body {
 
 .navigation-icon {
   display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-search {
+  background: url("../images/icons/search.svg") no-repeat center;
+}
+
+.icon-heart {
+  background: url("../images/icons/heart.svg") no-repeat center;
 }
 
 .navigation-link-current {
@@ -971,8 +981,6 @@ body {
 }
 
 .catalog-view-item {
-  width: 48px;
-  height: 48px;
   margin-right: 8px;
   box-sizing: border-box;
 
@@ -999,11 +1007,7 @@ body {
 }
 
 .catalog-view-link {
-  position: relative;
-
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .catalog-view-link:focus {
@@ -1011,13 +1015,21 @@ body {
 }
 
 .view-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: block;
+  width: 44px;
+  height: 44px;
+}
 
-  margin: auto;
+.icon-cards {
+  background: url("../images/icons/view-card.svg") no-repeat center;
+}
+
+.icon-table {
+  background: url("../images/icons/view-table.svg") no-repeat center;
+}
+
+.icon-list {
+  background: url("../images/icons/view-list.svg") no-repeat center;
 }
 
 /* accomodations */
@@ -1259,16 +1271,12 @@ body {
   min-width: 47px;
 }
 
-.social-link svg {
+.social-icon  {
   fill: #83B3D3;
 }
 
-.social-link:active svg {
-  fill: rgba(104, 162, 202, 0.3);
-}
-
-.social-link:hover svg,
-.social-link:focus-visible svg {
+.social-link:hover .social-icon,
+.social-link:focus-visible .social-icon {
   fill: #68A2CA;
 }
 
@@ -1276,8 +1284,12 @@ body {
   outline: none;
 }
 
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 @supports not selector(:focus-visible) {
-  .social-link:focus svg {
+  .social-link:focus .social-icon {
     fill: #68A2CA;
   }
 
