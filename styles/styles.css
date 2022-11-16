@@ -500,36 +500,36 @@ body {
 }
 
 .navigation {
+  flex-grow: 1;
   font-weight: 700;
   font-size: 20px;
 }
 
-.navigation-list {
+.navigation-list,
+.navigation-user-list {
   display: flex;
   flex-wrap: wrap;
 }
 
 .navigation-link {
-  position: relative;
   display: block;
   padding: 20px 16px;
 }
 
-.navigation-user .navigation-link {
-  padding: 22px 12px 18px;
-}
+.navigation-icon-link {
+  position: relative;
 
-.navigation-icon {
   display: block;
   width: 20px;
   height: 20px;
+  padding: 26px 12px 18px;
 }
 
-.icon-search {
+.link-search {
   background: url("../images/icons/search.svg") no-repeat center;
 }
 
-.icon-heart {
+.link-favourites {
   background: url("../images/icons/heart.svg") no-repeat center;
 }
 
@@ -1016,27 +1016,23 @@ body {
 
 .catalog-view-link {
   display: block;
+  width: 44px;
+  height: 44px;
 }
 
 .catalog-view-link:focus {
   outline: none;
 }
 
-.view-icon {
-  display: block;
-  width: 44px;
-  height: 44px;
-}
-
-.icon-cards {
+.view-link-cards {
   background: url("../images/icons/view-card.svg") no-repeat center;
 }
 
-.icon-table {
+.view-link-table {
   background: url("../images/icons/view-table.svg") no-repeat center;
 }
 
-.icon-list {
+.view-link-list {
   background: url("../images/icons/view-list.svg") no-repeat center;
 }
 
